@@ -442,8 +442,8 @@ def estimate_training_metrics(config):
 # ==========================================
 
 # Cabecera editorial sofisticada
-st.markdown('<div class="mono-badge">🧬 Laboratorio de Visión Artificial v3.0</div>', unsafe_allow_html=True)
-st.markdown('<h1 class="editorial-title">El Laboratorio CNN Definitivo</h1>', unsafe_allow_html=True)
+st.markdown('<div class="mono-badge">🧬 Vision por Computadora Artificial</div>', unsafe_allow_html=True)
+st.markdown('<h1 class="editorial-title"> ¿Como procesan las redes CNN las imagenes? </h1>', unsafe_allow_html=True)
 st.markdown('<div class="editorial-subtitle">Un simulador didáctico de vanguardia para experimentar, auditar y jugar en vivo con las Redes Neuronales Convolucionales (CNN) y entender cómo aprende a ver una máquina.</div>', unsafe_allow_html=True)
 
 # ------------------------------------------
@@ -479,13 +479,13 @@ bias_param = st.sidebar.slider("Sesgo (Bias):", min_value=-150, max_value=150, v
 # CONFIGURACIÓN DE PESTAÑAS
 # ------------------------------------------
 tab_canvas, tab_story, tab_gallery, tab_microscope, tab_playground, tab_robustness, tab_game = st.tabs([
-    "🎨 Lienzo Interactivo 16x16",
-    "📖 El Viaje del Píxel",
+    "🎨 Lienzo Interactivo",
+    "📖 Arquitectura Convolucional",
     "🖼️ Galería de Filtros",
     "🔎 Lupa y Microscopio",
     "🧠 Simulador de Entrenamiento",
     "🎯 Robustez y Grad-CAM",
-    "🎮 Reto del Optimizador"
+    "🎮 Quizz"
 ])
 
 # ==========================================
