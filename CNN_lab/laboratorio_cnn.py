@@ -918,7 +918,7 @@ with tab_playground:
 # PESTAÑA 6: AUDITOR DE ROBUSTEZ Y GRAD-CAM
 # ==========================================
 with tab_robustness:
-    st.markdown("### 🎯 Robustez y Explicabilidad (Grad-CAM)")
+    st.markdown("### 🎯 Mapa de Calor (Grad-CAM)")
     st.markdown(
         "¿Qué tan bien resiste el modelo ante distorsiones físicas? "
         "Ajusta los sliders para inyectar ruido o desviar el foco visual del modelo, "
@@ -982,7 +982,7 @@ with tab_game:
     # Lista de preguntas del Quiz
     quiz_questions = [
         {
-            "question": "1. Cuando aplicamos un filtro con pesos opuestos en las columnas laterales (como un Kernel de Sobel Vertical), ¿qué tipo de patrón resalta con mayor intensidad?",
+            "question": "1. Cuando un filtro compara los píxeles de la izquierda con los de la derecha, ¿qué tipo de característica de la imagen suele destacar?",
             "options": [
                 "Las zonas de color uniforme y texturas lisas.",
                 "Las líneas y transiciones verticales abruptas de contraste de izquierda a derecha.",
@@ -990,7 +990,7 @@ with tab_game:
                 "Toda la imagen con un brillo duplicado y plano."
             ],
             "correct": 1,
-            "explanation": "¡Excelente! Las columnas con pesos opuestos calculan la diferencia (gradiente) de intensidad entre el lado izquierdo y el derecho, revelando bordes verticales nítidos."
+            "explanation": "Las columnas con pesos opuestos calculan la diferencia (gradiente) de intensidad entre el lado izquierdo y el derecho, revelando bordes verticales nítidos."
         },
         {
             "question": "2. ¿Por qué es fundamental la función de activación ReLU (max(0, x)) después de una convolución?",
@@ -1001,7 +1001,7 @@ with tab_game:
                 "Para rellenar las esquinas de la imagen con píxeles blancos artificiales."
             ],
             "correct": 2,
-            "explanation": "¡Brillante! Sin ReLU u otras no linealidades, la red completa se reduciría algebraicamente a una sola operación lineal plana, imposibilitando el reconocimiento de curvas y formas complejas."
+            "explanation": "Sin ReLU u otras no linealidades, la red completa se reduciría algebraicamente a una sola operación lineal plana, imposibilitando el reconocimiento de curvas y formas complejas."
         },
         {
             "question": "3. ¿Qué beneficio clave aporta la operación de 'Max Pooling' (submuestreo) al flujo de la red convolucional?",
@@ -1012,7 +1012,7 @@ with tab_game:
                 "Aplana por completo todos los gradientes de retropropagación para que los bordes dejen de ser visibles."
             ],
             "correct": 1,
-            "explanation": "¡Correcto! Max Pooling selecciona el valor máximo en vecindades (por ejemplo, de 2x2), logrando que la red detecte la característica sin importar si está ligeramente desplazada de posición."
+            "explanation": "Max Pooling selecciona el valor máximo en vecindades (por ejemplo, de 2x2), logrando que la red detecte la característica sin importar si está ligeramente desplazada de posición."
         },
         {
             "question": "4. Si el mapa de calor de Grad-CAM de un clasificador de 'Gatos' ilumina intensamente el pasto de fondo en vez del cuerpo del gato, ¿qué nos indica esto científicamente?",
@@ -1023,7 +1023,7 @@ with tab_game:
                 "Que la tasa de aprendizaje es demasiado baja."
             ],
             "correct": 1,
-            "explanation": "¡Exacto! Los mapas de explicabilidad como Grad-CAM nos permiten desenmascarar correlaciones falsas: cuando la IA 'adivina' una clase observando elementos incidentales del entorno."
+            "explanation": "Los mapas de explicabilidad como Grad-CAM nos permiten desenmascarar correlaciones falsas: cuando la IA 'adivina' una clase observando elementos incidentales del entorno."
         },
         {
             "question": "5. ¿De qué forma podemos proteger de antemano a una CNN para que no falle ante el ruido, niebla, oclusión o desenfoques en el mundo real?",
@@ -1034,7 +1034,7 @@ with tab_game:
                 "Desactivando la capa de pooling para conservar la nitidez de la imagen."
             ],
             "correct": 2,
-            "explanation": "¡Espectacular! Al forzar al modelo a procesar muestras perturbadas artificialmente durante la fase de optimización, los filtros aprenden a retener abstracciones estructurales robustas e inmunes al desorden cotidiano."
+            "explanation": "Al forzar al modelo a procesar muestras perturbadas artificialmente durante la fase de optimización, los filtros aprenden a retener abstracciones estructurales robustas e inmunes al desorden cotidiano."
         }
     ]
     
